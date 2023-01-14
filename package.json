@@ -1,0 +1,19 @@
+{
+	"name": "service-container",
+	"author": {
+		"name": "İsmail Ceylan",
+		"email": "ismaillceylan@gmail.com"
+	},
+	"dependencies": {
+		"mark1.system.helper.typo.camel-case": "*"
+	},
+	"homepage": "https://github.com/ismailceylan/mark1/tree/master/system/core/service-container",
+	"keywords": [
+		"dependency",
+		"injection",
+		"service",
+		"container"
+	],
+	"license": "MIT",
+	"version": "0.0.2"
+}
