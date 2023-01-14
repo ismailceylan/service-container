@@ -1,5 +1,5 @@
 # System.Core.ServiceContainer
-==============================
+------------------------------------------
 
 [![Size][size-badge]][size]
 
