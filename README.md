@@ -1,8 +1,6 @@
 # System.Core.ServiceContainer
 ------------------------------------------
 
-[![Size][size-badge]][size]
-
 [Dependency Injection][source].
 
 Bu sınıf, diğer sınıfları düzenleyen bir yapı sağlar. Bunları üzerine register eder ve gerektiğinde birbirlerine bağımlılık olarak argüman tünelinden enjekte edilmelerini sağlar. Yani kısaca Dependency Injection isimli mimari yönelimin *otomatik biçimde* uygulanmasını mümkün kılar.
