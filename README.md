@@ -1,5 +1,4 @@
 # System.Core.ServiceContainer
-------------------------------------------
 
 [Dependency Injection][source].
 
