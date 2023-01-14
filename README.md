@@ -1,4 +1,4 @@
-# System.Core.ServiceContainer
+# Service Container
 
 [Dependency Injection][source].
 
