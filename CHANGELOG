@@ -1,0 +1,6 @@
+## 0.0.1 - 2020-09-14
+- Initial release
+
+## 0.0.3 - 2020-10-03
+- The parameter that refers to a dependency now has to begin with the "$" char.
+- Service containers may have their own boot method. When the constructor method runs (created an object from the service), the service does not have a client object, and the client object is initialized when the boot method runs.
