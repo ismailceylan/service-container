@@ -1,12 +1,12 @@
 import { camelCase } from "../../helper/typo";
 
 /**
- * class yapılarını düzenleyen class üstü bir yapı sağlar. Bu yapıya teslim edilen
- *   classlar artık "service container" olarak anılır.
- * 
- * Ayrıca metotlar ihtiyaç duydukları servis örneklerine erişmek için servisin adını
- *   parametre tüneline camelCase formatında yazarak bağımlılıkların kendilerine enjekte
- *   edilmelerini sağlayabilirler.
+ * It provides a class-based structure that organizes class structures. The classes
+ * delivered to this structure are now referred to as "service containers."
+ *
+ * Additionally, methods can access the service instances they require by writing
+ * the service's name in the parameter tunnel in camelCase format, enabling the
+ * dependencies to be injected into them.
  * 
  * @module
  * @class ServiceContainer
@@ -14,9 +14,9 @@ import { camelCase } from "../../helper/typo";
 class ServiceContainer
 {
 	/**
-	 * Verilen bir sınıfı saklar.
+	 * It stores a given class.
 	 * 
-	 * Aşağıdaki örneklerin tümü geçerlidir.
+	 * All of the following examples are valid.
 	 * 
 	 * ```javascript
 	 * ServiceContainer.register( "anonymous", function()
@@ -36,8 +36,8 @@ class ServiceContainer
 	 * ```
 	 *
 	 * @static
-	 * @param {String|Function} name bir isim veya isimli bir metot/sınıf
-	 * @param {Function} constructor isimli veya isimsiz bir metot veya bir sınıf
+	 * @param {String|Function} name a name or a named method/class
+	 * @param {Function} constructor a named or anonymous method/function or a class
 	 * @memberof ServiceContainer
 	 * @author İsmail Ceylan
 	 * @created 2020-09-07T15:01:23+0300
@@ -54,12 +54,12 @@ class ServiceContainer
 	}
 
 	/**
-	 * Daha önceden register edilmiş adı verilen bir servisi örnekleyip döndürür.
+	 * It instantiates and returns a previously registered service instance with the given name.
 	 *
 	 * @static
-	 * @param {String} serviceContainerName örneklenecek bir servis (sınıf) camelCase adı
-	 * @param {Array} args örneklenen sınıfa geçirilecek parametreler
-	 * @return {Object} geriye adı verilen servisin bir örneği döner
+	 * @param {String} serviceContainerName the camelCase name of a service (class) to be instantiated.
+	 * @param {Array} args örneklenen the parameters to be passed to the class.
+	 * @return {Object}
 	 * @memberof ServiceContainer
 	 * @author İsmail Ceylan
 	 * @created 2020-09-07T15:12:06+0300
@@ -91,12 +91,12 @@ class ServiceContainer
 	}
 
 	/**
-	 * Verilen bir metot/sınıfın kurucusunda tanımlanan argüman isimlerini parse edip
-	 *   bir dizi olarak döndürür.
+	 * It parses the argument names defined in the constructor of a given
+  	 * method/class and returns them as an array.
 	 *
 	 * @static
-	 * @param {Function} serviceContainer bağımlılıkları parse edilecek bir metot/class
-	 * @return {Array} geriye verilen metot/sınıfın kurucusunda tanımlanan argüman isimleri döndürülür
+	 * @param {Function} serviceContainer a method/class whose dependencies will be parsed.
+	 * @return {Array}
 	 * @memberof ServiceContainer
 	 * @author İsmail Ceylan
 	 * @created 2020-09-07T15:19:45+0300
@@ -118,13 +118,13 @@ class ServiceContainer
 	}
 
 	/**
-	 * Dizi olarak verilen bağımlılıkları örnekleyip tekrar dizi olarak döndürür. Mevcut
-	 *   olmayan servisler pas geçilir ve döndürülen dizide yer almazlar.
+	 * It instantiates the dependencies provided as an array and returns them as an array. If
+  	 * any services are not available, they are skipped and won't be included in the returned array.
 	 *
 	 * @static
-	 * @param {Array} dependencies örneklenecek bağımlılıkların camelCase gösterimlerinden
-	 *   oluşan dizi
-	 * @returns
+	 * @param {Array} dependencies an array consisting of camelCase representations of the
+  	 *   dependencies to be instantiated.
+	 * @returns void
 	 * @memberof ServiceContainer
 	 * @author İsmail Ceylan
 	 * @created 2020-09-07T16:08:05+0300
