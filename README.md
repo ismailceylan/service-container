@@ -105,7 +105,7 @@ console.log(
 // }
 ```
 
-## Lisans
+## License
 
 [MIT][license] © [İsmail Ceylan][author]
 
