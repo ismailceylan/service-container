@@ -2,20 +2,19 @@
 
 [Dependency Injection][source].
 
-Bu sınıf, diğer sınıfları düzenleyen bir yapı sağlar. Bunları üzerine register eder ve gerektiğinde birbirlerine bağımlılık olarak argüman tünelinden enjekte edilmelerini sağlar. Yani kısaca Dependency Injection isimli mimari yönelimin *otomatik biçimde* uygulanmasını mümkün kılar.
+This class provides a structure that organizes other classes. It registers them and enables them to be injected into each other through the argument tunnel as dependencies when needed. In short, it enables the architectural approach called Dependency Injection.
 
-Javascript'te henüz tür dayatma gibi bir yapı native olarak desteklenmediği için sınıf/fonksiyonların argüman tünelinden talep edecekleri bağımlılıkları **camelCase** biçiminde sağlaması gerekir.
+Since there is no native support for features like type casting in JavaScript, classes/functions need to provide their dependencies that they will request from the argument tunnel in camelCase format.
 
-İlk önce bağımlılık alacak olan argümanlar ve ardından normal argümanlar tanımlanmalıdır. Bağımlılık ile aynı isimde normal argümanlar tanımlamamalısınız!
+First, the arguments that will receive dependencies should be defined, followed by regular arguments. You should not define regular arguments with the same name as a dependency!
 
-## Örnek Kullanım
+## Usage
 
 ```js
 import ServiceContainer from "system/core/service-container";
 
 class Gasoline{}
 class Coal{}
-
 class V8Engine
 {
 	constructor( gasoline )
@@ -74,7 +73,7 @@ console.log(
 // }
 ```
 
-## Fonksiyonel Kullanım
+## Functional Equivalent
 
 ```js
 // ...
